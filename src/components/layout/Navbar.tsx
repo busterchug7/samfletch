@@ -40,7 +40,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8 mr-[440px]">
           {NAV_LINKS.map((link) => (
             <button
               key={link.href}
@@ -53,8 +53,8 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:flex items-center">
+        {/* Desktop CTA — only visible on scroll */}
+        <div className={`hidden md:flex items-center transition-all duration-300 ${scrolled ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
           <button
             onClick={() => handleNavClick("#contact")}
             className="px-5 py-2 text-sm font-medium bg-[#C9A84C] text-white rounded hover:bg-[#a8873c] transition-colors duration-200 cursor-pointer border-none"

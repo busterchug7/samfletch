@@ -19,9 +19,9 @@ export default function Home() {
         <Hero />
         <MarqueeBar />
         <Services />
+        <Process />
         <Portfolio />
         <CaseStudy />
-        <Process />
         <Testimonials />
         <CtaBanner />
         <FAQ />

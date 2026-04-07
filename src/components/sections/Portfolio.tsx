@@ -7,7 +7,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 px-6 bg-[#F4F4F5]">
+    <section id="portfolio" className="py-24 px-6 bg-white border-y border-[#E4E4E7]">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <span className="text-xs uppercase tracking-[0.2em] text-[#C9A84C] mb-4 block">

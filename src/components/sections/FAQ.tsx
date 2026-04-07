@@ -54,8 +54,8 @@ export default function FAQ() {
           transform: "translateZ(0)",
         }}
       />
-      {/* Light overlay — brighter than dark theme */}
-      <div className="absolute inset-0 z-0 bg-white/82" />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 z-0 bg-[#0A0A0A]/82" />
 
       <div className="relative z-10 max-w-3xl mx-auto">
         <ScrollReveal className="mb-14 text-center">
@@ -63,7 +63,7 @@ export default function FAQ() {
             FAQ
           </span>
           <h2
-            className="text-4xl md:text-5xl font-bold text-[#0A0A0A]"
+            className="text-4xl md:text-5xl font-bold text-[#F5F5F5]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Got Questions?
@@ -73,12 +73,12 @@ export default function FAQ() {
         <div className="space-y-3">
           {faqs.map((faq, i) => (
             <ScrollReveal key={i} delay={i * 0.05}>
-              <div className="border border-[#E4E4E7] rounded-lg overflow-hidden shadow-sm">
+              <div className="border border-[#2A2A2A] rounded-lg overflow-hidden">
                 <button
                   onClick={() => toggle(i)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left bg-white hover:bg-[#FAFAFA] transition-colors duration-200 cursor-pointer border-none"
+                  className="w-full flex items-center justify-between px-6 py-5 text-left bg-[#141414] hover:bg-[#1a1a1a] transition-colors duration-200 cursor-pointer border-none"
                 >
-                  <span className="text-[#0A0A0A] font-medium pr-4">
+                  <span className="text-[#F5F5F5] font-medium pr-4">
                     {faq.question}
                   </span>
                   <motion.span
@@ -98,8 +98,8 @@ export default function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <div className="px-6 py-5 border-t border-[#E4E4E7] bg-[#FAFAFA]">
-                        <p className="text-[#6B7280] leading-relaxed">
+                      <div className="px-6 py-5 border-t border-[#2A2A2A] bg-[#0f0f0f]">
+                        <p className="text-[#9CA3AF] leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -112,7 +112,7 @@ export default function FAQ() {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-[#9CA3AF] text-sm">
+          <p className="text-[#6B7280] text-sm">
             Something else?{" "}
             <button
               onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}

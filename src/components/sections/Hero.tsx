@@ -70,7 +70,7 @@ export default function Hero() {
   const statsInView = useInView(statsRef, { once: true });
 
   return (
-    <section className="relative min-h-screen flex bg-[#FAFAFA] overflow-hidden">
+    <section className="relative h-screen flex bg-[#FAFAFA] overflow-hidden">
 
       {/* Dot-grid texture */}
       <div
@@ -86,24 +86,11 @@ export default function Hero() {
 
       {/* ════ LEFT COLUMN ════ */}
       <motion.div
-        className="relative z-10 flex flex-col justify-between w-full lg:w-[55%] px-10 md:px-16 pt-28 pb-10"
+        className="relative z-10 flex flex-col justify-between w-full lg:w-[55%] px-10 md:px-16 pt-20 pb-8"
         variants={container}
         initial="hidden"
         animate="show"
       >
-        {/* Brand block */}
-        <motion.div variants={item} className="mb-10">
-          <p
-            className="text-2xl font-bold leading-none"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            <span className="text-[#0A0A0A]">Doug</span>
-            <span className="text-[#C9A84C]">Designs</span>
-          </p>
-          <p className="text-xs uppercase tracking-[0.25em] text-[#9CA3AF] mt-1">
-            Custom Web Development
-          </p>
-        </motion.div>
 
         {/* Main content */}
         <div className="flex-1 flex flex-col justify-center">
@@ -167,7 +154,7 @@ export default function Hero() {
               onClick={() => scrollToSection("#contact")}
               className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-[#C9A84C] hover:text-[#0A0A0A] transition-colors duration-200 cursor-pointer bg-transparent border-none w-fit group"
             >
-              Start Your Project
+              Get your free website design
               <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </button>
             <span className="text-[10px] uppercase tracking-widest text-[#9CA3AF]">
@@ -233,7 +220,8 @@ export default function Hero() {
             alt="Web design workspace"
             fill
             priority
-            className="object-cover object-center scale-105 brightness-110 contrast-105"
+            className="object-cover scale-105 brightness-110 contrast-105"
+            style={{ objectPosition: "35% center" }}
             sizes="50vw"
           />
           {/* Thin gradient bleed — just enough to blend the edge */}

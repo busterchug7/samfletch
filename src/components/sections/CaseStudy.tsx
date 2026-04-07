@@ -10,7 +10,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 bg-white border-y border-[#E4E4E7]">
+    <section id="about" className="py-24 px-6 bg-[#F4F4F5]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text */}
@@ -55,7 +55,7 @@ export default function About() {
 
           {/* Right: Stats + quote card */}
           <ScrollReveal direction="right" delay={0.15}>
-            <div className="bg-[#FAFAFA] border border-[#E4E4E7] rounded-2xl p-10 space-y-8 shadow-sm">
+            <div className="bg-white border border-[#E4E4E7] rounded-2xl p-10 space-y-8 shadow-sm">
               <div className="border-l-2 border-[#C9A84C] pl-5">
                 <p className="text-[#0A0A0A] text-lg leading-relaxed italic">
                   &ldquo;Too many great businesses were invisible online. We
