@@ -137,16 +137,16 @@ export const processSteps = [
 ];
 
 export const marqueeItems = [
-  "Barber Shops",
-  "Law Firms",
-  "Construction Companies",
-  "Restaurants",
-  "Medical Practices",
-  "Real Estate Agencies",
-  "Retail Stores",
-  "Fitness Studios",
-  "Auto Dealers",
-  "Consulting Firms",
+  "Affordable Pricing",
+  "Proven to Increase Leads",
+  "Fast Delivery",
+  "More Leads",
+  "Higher Conversions",
+  "Built for Growth",
+  "Fast & Optimised",
+  "Fully Managed",
+  "Transparent Pricing",
+  "Real Results",
 ];
 
 export const caseStudy = {

@@ -8,6 +8,7 @@ import CaseStudy from "@/components/sections/CaseStudy";
 import Process from "@/components/sections/Process";
 import Testimonials from "@/components/sections/Testimonials";
 import CtaBanner from "@/components/sections/CtaBanner";
+import FAQ from "@/components/sections/FAQ";
 import ContactForm from "@/components/sections/ContactForm";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <Process />
         <Testimonials />
         <CtaBanner />
+        <FAQ />
         <ContactForm />
       </main>
       <Footer />

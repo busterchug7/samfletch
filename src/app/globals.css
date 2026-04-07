@@ -2,16 +2,16 @@
 
 @theme {
   /* Brand Colors */
-  --color-brand-bg:       #0A0A0A;
+  --color-brand-bg:       #FAFAFA;
   --color-brand-gold:     #C9A84C;
   --color-brand-gold-dim: #a8873c;
-  --color-brand-text:     #F5F5F5;
-  --color-brand-muted:    #9CA3AF;
-  --color-brand-surface:  #141414;
-  --color-brand-border:   #2A2A2A;
+  --color-brand-text:     #0A0A0A;
+  --color-brand-muted:    #6B7280;
+  --color-brand-surface:  #FFFFFF;
+  --color-brand-border:   #E4E4E7;
 
   /* Typography */
-  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-heading: 'Bebas Neue', sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
 }
 
@@ -20,8 +20,8 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: #0A0A0A;
-    color: #F5F5F5;
+    background-color: #FAFAFA;
+    color: #0A0A0A;
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

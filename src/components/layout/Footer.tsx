@@ -14,8 +14,8 @@ export default function Footer() {
               className="text-xl tracking-tight mb-3"
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              <span className="text-[#C9A84C]">D</span>
-              <span className="text-[#F5F5F5]">ougDesigns</span>
+              <span className="text-[#F5F5F5]">Doug</span>
+              <span className="text-[#C9A84C]">Designs</span>
             </p>
             <p className="text-[#9CA3AF] text-sm leading-relaxed max-w-xs">
               Custom websites that look great, perform fast, and grow your

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Bebas_Neue, Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const playfair = Bebas_Neue({
   subsets: ["latin"],
+  weight: "400",
   variable: "--font-heading",
   display: "swap",
 });
@@ -11,6 +12,13 @@ const playfair = Playfair_Display({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["900"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -26,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable} ${montserrat.variable}`}>
       <body>{children}</body>
     </html>
   );

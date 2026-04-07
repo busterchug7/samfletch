@@ -5,6 +5,7 @@ export const FORMSPREE_ENDPOINT =
 export const CONTACT_EMAIL = "hello@dougdesigns.com"; // TODO: Replace with real email
 
 export const NAV_LINKS = [
+  { label: "About",    href: "#about" },
   { label: "Work",     href: "#portfolio" },
   { label: "Services", href: "#services" },
   { label: "Process",  href: "#process" },
