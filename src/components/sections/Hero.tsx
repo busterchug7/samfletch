@@ -1,9 +1,10 @@
 "use client";
 
-import { motion, type Variants, animate, useInView } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
 import { FiGlobe, FiPhone, FiMapPin } from "react-icons/fi";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { ShinyButton } from "@/components/ui/ShinyButton";
 
 /* ── Rotating pain-point phrases ── */
 const phrases = [
@@ -12,29 +13,6 @@ const phrases = [
   "Low conversions costing you sales?",
   "Competitors outranking you online?",
 ];
-
-/* ── Animated counter ── */
-function AnimatedCounter({
-  target,
-  suffix,
-  shouldStart,
-}: {
-  target: number;
-  suffix: string;
-  shouldStart: boolean;
-}) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    if (!shouldStart) return;
-    const ctrl = animate(0, target, {
-      duration: 2.2,
-      ease: "easeOut",
-      onUpdate: (v) => setCount(Math.floor(v)),
-    });
-    return ctrl.stop;
-  }, [target, shouldStart]);
-  return <span>{count}{suffix}</span>;
-}
 
 /* ── Framer variants ── */
 const container: Variants = {
@@ -64,10 +42,6 @@ export default function Hero() {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
-  /* Stats counter trigger */
-  const statsRef = useRef<HTMLDivElement>(null);
-  const statsInView = useInView(statsRef, { once: true });
 
   return (
     <section className="relative h-screen flex bg-[#FAFAFA] overflow-hidden">
@@ -151,43 +125,14 @@ export default function Hero() {
 
           {/* CTA */}
           <motion.div variants={item} className="flex flex-col gap-3 w-fit">
-            <button
-              onClick={() => scrollToSection("#contact")}
-              className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-[#C9A84C] hover:text-[#0A0A0A] transition-colors duration-200 cursor-pointer bg-transparent border-none w-fit group"
-              style={{ fontSize: "clamp(0.75rem, 1vw, 1.1rem)" }}
-            >
-              Get your free website design
-              <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-            </button>
+            <ShinyButton onClick={() => scrollToSection("#contact")}>
+              Get your free website design →
+            </ShinyButton>
             <span className="uppercase tracking-widest text-[#9CA3AF]" style={{ fontSize: "clamp(0.6rem, 0.7vw, 0.8rem)" }}>
-              ◆ See your new website in under 5 days
+              ◆ Limited spots available this month
             </span>
           </motion.div>
 
-          {/* Animated stats */}
-          <motion.div
-            variants={item}
-            ref={statsRef}
-            className="mt-12 flex gap-8 xl:gap-12"
-          >
-            {[
-              { target: 50, suffix: "+", label: "Sites Launched" },
-              { target: 12, suffix: "+", label: "Industries Served" },
-              { target: 100, suffix: "%", label: "Satisfaction" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p
-                  className="font-bold text-[#C9A84C]"
-                  style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(1.5rem, 2.2vw, 3.5rem)" }}
-                >
-                  <AnimatedCounter target={stat.target} suffix={stat.suffix} shouldStart={statsInView} />
-                </p>
-                <p className="uppercase tracking-widest text-[#9CA3AF] mt-0.5" style={{ fontSize: "clamp(0.6rem, 0.65vw, 0.8rem)" }}>
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </motion.div>
         </div>
 
         {/* Bottom info strip */}
@@ -231,33 +176,47 @@ export default function Hero() {
           {/* Subtle gold glow on the right panel edge */}
           <div className="absolute inset-y-0 left-[10%] w-px bg-gradient-to-b from-transparent via-[#C9A84C]/40 to-transparent" />
 
-          {/* Floating social proof card */}
+          {/* Stats bar */}
           <motion.div
-            className="absolute bottom-16 left-4 bg-white/95 backdrop-blur-md border border-[#E4E4E7] rounded-xl px-5 py-4 shadow-xl"
-            initial={{ opacity: 0, y: 20 }}
+            className="absolute bottom-0 left-0 right-0 z-10"
+            style={{
+              background: "rgba(7, 8, 16, 0.62)",
+              borderTop: "1px solid rgba(201, 168, 76, 0.25)",
+              backdropFilter: "blur(6px)",
+            }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.6, ease: "easeOut" }}
           >
-            <p
-              className="text-3xl font-bold text-[#C9A84C]"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              +147%
-            </p>
-            <p className="text-[11px] uppercase tracking-widest text-[#6B7280] mt-0.5">
-              Avg. lead increase
-            </p>
-            <div className="flex items-center gap-1.5 mt-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] animate-pulse" />
-              <span className="text-[10px] text-[#9CA3AF] uppercase tracking-wider">
-                Across all clients
-              </span>
+            <div className="relative grid grid-cols-3 text-center py-5 px-6">
+              {/* Divider 1 */}
+              <span className="absolute left-1/3 top-1/2 -translate-y-1/2 w-px h-6 bg-white/10" />
+              {/* Divider 2 */}
+              <span className="absolute left-2/3 top-1/2 -translate-y-1/2 w-px h-6 bg-white/10" />
+
+              {[
+                { value: "50+",  label: "Websites Designed" },
+                { value: "100%", label: "Design Satisfaction" },
+                { value: "48hr", label: "First Concept Delivered" },
+              ].map(({ value, label }) => (
+                <div key={label}>
+                  <p
+                    className="text-3xl text-white leading-none"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    {value}
+                  </p>
+                  <p className="text-[10px] uppercase tracking-widest text-white/55 mt-1">
+                    {label}
+                  </p>
+                </div>
+              ))}
             </div>
           </motion.div>
 
           {/* University badge */}
           <motion.div
-            className="absolute top-20 left-8 bg-white/95 backdrop-blur-md border border-[#E4E4E7] rounded-full px-4 py-2 shadow-lg"
+            className="absolute top-20 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md border border-[#E4E4E7] rounded-full px-4 py-2 shadow-lg"
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.5, ease: "easeOut" }}
