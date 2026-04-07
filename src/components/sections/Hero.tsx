@@ -255,7 +255,7 @@ export default function Hero() {
 
           {/* University badge */}
           <motion.div
-            className="absolute top-20 left-8 bg-white/95 backdrop-blur-md border border-[#E4E4E7] rounded-full px-4 py-2 shadow-lg"
+            className="absolute top-20 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md border border-[#E4E4E7] rounded-full px-4 py-2 shadow-lg"
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.5, ease: "easeOut" }}
