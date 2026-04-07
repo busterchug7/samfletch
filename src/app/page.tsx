@@ -1,7 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
-import MarqueeBar from "@/components/sections/MarqueeBar";
 import Services from "@/components/sections/Services";
 import Portfolio from "@/components/sections/Portfolio";
 import CaseStudy from "@/components/sections/CaseStudy";
@@ -17,7 +16,6 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <MarqueeBar />
         <Services />
         <Process />
         <Portfolio />

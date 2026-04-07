@@ -53,6 +53,33 @@ export const portfolioProjects = [
     imageUrl: "https://picsum.photos/seed/realestate6/600/400",
     link: "#", // TODO: Replace with real project URL
   },
+  {
+    id: 8,
+    name: "Hugos Trims",
+    industry: "Barber Shop",
+    description:
+      "Dark, premium aesthetic with bold typography, service menu, and a prominent booking CTA. Built to match the shop's high-end craft and local reputation.",
+    imageUrl: "/portfolio-hugos-trims.png",
+    link: "#",
+  },
+  {
+    id: 9,
+    name: "Ember & Oak",
+    industry: "Restaurant",
+    description:
+      "Warm, atmospheric design with a full seasonal menu, private dining enquiry form, and integrated OpenTable reservations. Bookings up 35% in the first month.",
+    imageUrl: "https://picsum.photos/seed/restaurant9/600/400",
+    link: "#",
+  },
+  {
+    id: 7,
+    name: "Jitter",
+    industry: "SaaS",
+    description:
+      "Portfolio-building platform for developers — gamified sprints, verified projects, and a community of builders earning while they learn.",
+    imageUrl: "/portfolio-jitter.png",
+    link: "#",
+  },
 ];
 
 export const testimonials = [
@@ -84,28 +111,28 @@ export const testimonials = [
 
 export const services = [
   {
-    iconName: "FaPaintbrush",
-    title: "Custom Web Design",
-    description:
-      "Bespoke designs built around your brand — no templates, no shortcuts. Every pixel intentional.",
-  },
-  {
-    iconName: "FaCartShopping",
-    title: "E-Commerce",
-    description:
-      "Full-featured online stores with seamless checkout, inventory management, and conversion optimization.",
-  },
-  {
     iconName: "FaMagnifyingGlass",
-    title: "SEO-Ready Builds",
+    title: "Isolate Underperforming Assets",
     description:
-      "Every site ships with structured data, Core Web Vitals optimization, and semantic markup baked in.",
+      "We audit your existing marketing to pinpoint exactly what isn't pulling its weight. Whether that's a page, a campaign, or a channel, we find it and build a clear plan to fix it.",
+  },
+  {
+    iconName: "FaShareNodes",
+    title: "Social Media Remapping",
+    description:
+      "We optimise or build out your social profiles from the ground up, then align them with the rest of your marketing so everything works together rather than in isolation.",
+  },
+  {
+    iconName: "FaPaintbrush",
+    title: "Bespoke Web Design",
+    description:
+      "Custom, SEO-first websites designed to attract more of the right traffic and turn visitors into customers. No templates. Built entirely around your business.",
   },
   {
     iconName: "FaScrewdriverWrench",
-    title: "Maintenance & Support",
+    title: "Monthly Support",
     description:
-      "Monthly care plans — updates, backups, uptime monitoring, and priority support when you need it.",
+      "Ongoing care plans that cover updates, backups, and uptime monitoring. Plus clear reporting so you always know exactly how your online presence is performing.",
   },
 ];
 

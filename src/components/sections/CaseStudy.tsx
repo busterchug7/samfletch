@@ -10,23 +10,25 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 bg-[#F4F4F5]">
+    <section id="about" className="py-20 lg:py-[7.5rem] px-6 bg-[#1A1A1A]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text */}
           <ScrollReveal direction="left">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#C9A84C] mb-4 block">
-              About Us
-            </span>
-            <h2
-              className="text-4xl md:text-5xl font-bold text-[#0A0A0A] mb-6 leading-tight"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Built by Developers.
-              <br />
-              <span className="text-[#C9A84C]">Driven by Results.</span>
-            </h2>
-            <div className="space-y-5 text-[#6B7280] leading-relaxed">
+            <div className="section-header--dark">
+              <span className="text-xs uppercase tracking-[0.2em] text-[#C9A84C] mb-4 block">
+                About Us
+              </span>
+              <h2
+                className="text-4xl md:text-5xl font-bold text-[#F5F5F5] mb-6 leading-tight"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                Built by Developers.
+                <br />
+                <span className="text-[#C9A84C]">Driven by Results.</span>
+              </h2>
+            </div>
+            <div className="space-y-5 text-[#9CA3AF] leading-relaxed">
               <p>
                 DougDesigns was founded by a team of third-year software
                 developers at the University of Exeter. What started as a shared
@@ -55,9 +57,9 @@ export default function About() {
 
           {/* Right: Stats + quote card */}
           <ScrollReveal direction="right" delay={0.15}>
-            <div className="bg-white border border-[#E4E4E7] rounded-2xl p-10 space-y-8 shadow-sm">
+            <div className="bg-[#242424] border border-[#2A2A2A] rounded-2xl p-10 space-y-8 shadow-sm">
               <div className="border-l-2 border-[#C9A84C] pl-5">
-                <p className="text-[#0A0A0A] text-lg leading-relaxed italic">
+                <p className="text-[#F5F5F5] text-lg leading-relaxed italic">
                   &ldquo;Too many great businesses were invisible online. We
                   knew we could change that.&rdquo;
                 </p>
@@ -66,7 +68,7 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-6 pt-4 border-t border-[#E4E4E7]">
+              <div className="grid grid-cols-3 gap-6 pt-4 border-t border-[#2A2A2A]">
                 {stats.map((stat) => (
                   <div key={stat.label} className="text-center">
                     <p

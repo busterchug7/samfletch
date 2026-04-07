@@ -39,7 +39,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="relative py-24 px-6 overflow-hidden"
+      className="relative py-20 lg:py-[7.5rem] px-6 overflow-hidden"
     >
       {/* Background image layer */}
       <div
@@ -59,15 +59,17 @@ export default function FAQ() {
 
       <div className="relative z-10 max-w-3xl mx-auto">
         <ScrollReveal className="mb-14 text-center">
-          <span className="text-xs uppercase tracking-[0.2em] text-[#C9A84C] mb-4 block">
-            FAQ
-          </span>
-          <h2
-            className="text-4xl md:text-5xl font-bold text-[#F5F5F5]"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Got Questions?
-          </h2>
+          <div className="section-header--dark">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#C9A84C] mb-4 block">
+              FAQ
+            </span>
+            <h2
+              className="text-4xl md:text-5xl font-bold text-[#F5F5F5]"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              Got Questions?
+            </h2>
+          </div>
         </ScrollReveal>
 
         <div className="space-y-3">

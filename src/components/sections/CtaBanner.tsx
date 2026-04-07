@@ -8,7 +8,7 @@ export default function CtaBanner() {
   };
 
   return (
-    <section className="relative py-24 px-6 bg-[#C9A84C] overflow-hidden">
+    <section className="relative py-20 lg:py-[7.5rem] px-6 bg-[#C9A84C] overflow-hidden">
       {/* Noise texture overlay for depth */}
       <div
         className="absolute inset-0 opacity-5 pointer-events-none"
@@ -25,17 +25,19 @@ export default function CtaBanner() {
 
       <div className="relative max-w-4xl mx-auto text-center">
         <ScrollReveal>
-          <span className="text-xs uppercase tracking-[0.2em] text-[#0A0A0A]/60 mb-4 block font-medium">
-            Ready to Grow?
-          </span>
-          <h2
-            className="text-4xl md:text-6xl font-bold text-[#0A0A0A] mb-6 leading-tight"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Ready to grow your
-            <br />
-            business online?
-          </h2>
+          <div className="section-header--gold">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#0A0A0A]/60 mb-4 block font-medium">
+              Ready to Grow?
+            </span>
+            <h2
+              className="text-4xl md:text-6xl font-bold text-[#0A0A0A] mb-6 leading-tight"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              Ready to grow your
+              <br />
+              business online?
+            </h2>
+          </div>
           <p className="text-[#0A0A0A]/70 max-w-xl mx-auto mb-10 text-base leading-relaxed">
             Every week you go without a professional website is a week your
             competitors are winning clients you should have. Let&apos;s change

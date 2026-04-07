@@ -38,25 +38,27 @@ export default function ContactForm() {
     "w-full bg-[#0A0A0A] border border-[#2A2A2A] rounded px-4 py-3 text-[#F5F5F5] text-sm placeholder:text-[#9CA3AF]/50 focus:border-[#C9A84C] focus:outline-none transition-colors duration-200";
 
   return (
-    <section id="contact" className="py-24 px-6 bg-[#141414] border-t border-[#2A2A2A]">
+    <section id="contact" className="py-20 lg:py-[7.5rem] px-6 bg-[#141414] border-t border-[#2A2A2A]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.2em] text-[#C9A84C] mb-4 block">
-            Get Started
-          </span>
-          <h2
-            className="text-4xl md:text-5xl font-bold text-[#F5F5F5] mb-4"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Let&apos;s Build Something
-            <br />
-            <span className="text-[#C9A84C]">Together</span>
-          </h2>
-          <p className="text-[#9CA3AF] max-w-md mx-auto text-sm leading-relaxed">
-            Tell us about your business and what you need. We&apos;ll get back
-            to you within 24 hours.
-          </p>
+          <div className="section-header--dark">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#C9A84C] mb-4 block">
+              Get Started
+            </span>
+            <h2
+              className="text-4xl md:text-5xl font-bold text-[#F5F5F5] mb-4"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              Let&apos;s Build Something
+              <br />
+              <span className="text-[#C9A84C]">Together</span>
+            </h2>
+            <p className="text-[#9CA3AF] max-w-md mx-auto text-sm leading-relaxed">
+              Tell us about your business and what you need. We&apos;ll get back
+              to you within 24 hours.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start max-w-5xl mx-auto">

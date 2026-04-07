@@ -5,19 +5,21 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Process() {
   return (
-    <section id="process" className="py-24 px-6 bg-[#F4F4F5]">
+    <section id="process" className="py-20 lg:py-[7.5rem] px-6 bg-[#F4F4F4]">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal className="text-center mb-20">
-          <span className="text-xs uppercase tracking-[0.2em] text-[#C9A84C] mb-4 block">
-            How It Works
-          </span>
-          <h2
-            className="text-4xl md:text-5xl font-bold text-[#0A0A0A]"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            From First Call to{" "}
-            <span className="text-[#C9A84C]">Live Site</span>
-          </h2>
+          <div className="section-header">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#C9A84C] mb-4 block">
+              How It Works
+            </span>
+            <h2
+              className="text-4xl md:text-5xl font-bold text-[#0A0A0A]"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              From First Call to{" "}
+              <span className="text-[#C9A84C]">Live Site</span>
+            </h2>
+          </div>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">

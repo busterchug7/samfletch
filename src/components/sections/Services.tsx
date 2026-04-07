@@ -2,7 +2,7 @@
 
 import {
   FaPaintbrush,
-  FaCartShopping,
+  FaShareNodes,
   FaMagnifyingGlass,
   FaScrewdriverWrench,
 } from "react-icons/fa6";
@@ -11,30 +11,32 @@ import ScrollReveal from "./ScrollReveal";
 
 const iconMap: Record<string, React.ReactNode> = {
   FaPaintbrush: <FaPaintbrush size={22} />,
-  FaCartShopping: <FaCartShopping size={22} />,
+  FaShareNodes: <FaShareNodes size={22} />,
   FaMagnifyingGlass: <FaMagnifyingGlass size={22} />,
   FaScrewdriverWrench: <FaScrewdriverWrench size={22} />,
 };
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 px-6 bg-white">
+    <section id="services" className="py-20 lg:py-[7.5rem] px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.2em] text-[#C9A84C] mb-4 block">
-            What We Do
-          </span>
-          <h2
-            className="text-4xl md:text-5xl font-bold text-[#0A0A0A] mb-4"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Everything Your Business
-            <br />
-            Needs Online
-          </h2>
-          <p className="text-[#6B7280] max-w-xl mx-auto text-base leading-relaxed">
-            From first impression to final conversion — we handle the full picture.
-          </p>
+          <div className="section-header">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#C9A84C] mb-4 block">
+              What We Do
+            </span>
+            <h2
+              className="text-4xl md:text-5xl font-bold text-[#0A0A0A] mb-4"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              Everything Your Business
+              <br />
+              Needs Online
+            </h2>
+            <p className="text-[#6B7280] max-w-xl mx-auto text-base leading-relaxed">
+              From first impression to final conversion — we handle the full picture.
+            </p>
+          </div>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -50,7 +52,7 @@ export default function Services() {
                 >
                   {service.title}
                 </h3>
-                <p className="text-[#6B7280] text-sm leading-relaxed">
+                <p className="text-[#6B7280] text-base leading-relaxed">
                   {service.description}
                 </p>
               </div>
