@@ -86,7 +86,7 @@ export default function Hero() {
 
       {/* ════ LEFT COLUMN ════ */}
       <motion.div
-        className="relative z-10 flex flex-col justify-between w-full lg:w-[55%] px-10 md:px-16 pt-20 pb-8"
+        className="relative z-10 flex flex-col justify-between w-full lg:w-[55%] px-10 md:px-16 xl:px-20 2xl:px-28 pt-20 pb-8"
         variants={container}
         initial="hidden"
         animate="show"
@@ -102,8 +102,8 @@ export default function Hero() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[#C9A84C]" />
             </span>
             <span
-              className="text-xs uppercase tracking-[0.18em] text-[#6B7280]"
-              style={{ opacity: visible ? 1 : 0, transition: "opacity 0.4s" }}
+              className="uppercase tracking-[0.18em] text-[#6B7280]"
+              style={{ fontSize: "clamp(0.7rem, 0.85vw, 1.1rem)", opacity: visible ? 1 : 0, transition: "opacity 0.4s" }}
             >
               {phrases[phraseIndex]}
             </span>
@@ -112,8 +112,8 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             variants={item}
-            className="text-6xl md:text-7xl lg:text-[5.5rem] leading-[1] tracking-tight text-[#0A0A0A] mb-6"
-            style={{ fontFamily: "var(--font-heading)" }}
+            className="leading-[1] tracking-tight text-[#0A0A0A] mb-6"
+            style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(3.5rem, 5.8vw, 9rem)" }}
           >
             More Leads.
             <br />
@@ -133,8 +133,8 @@ export default function Hero() {
           {/* Try before you buy */}
           <motion.p
             variants={item}
-            className="text-xl md:text-2xl tracking-[0.08em] uppercase text-[#0A0A0A] mb-3"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="tracking-[0.08em] uppercase text-[#0A0A0A] mb-3"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.1rem, 1.7vw, 2.4rem)" }}
           >
             Try before you buy.
           </motion.p>
@@ -142,7 +142,8 @@ export default function Hero() {
           {/* Body text */}
           <motion.p
             variants={item}
-            className="text-[#6B7280] text-base leading-relaxed max-w-md mb-10"
+            className="text-[#6B7280] leading-relaxed mb-10"
+            style={{ fontSize: "clamp(0.9rem, 1.1vw, 1.35rem)", maxWidth: "38ch" }}
           >
             We design your website first—so you can see exactly what
             you&apos;re getting before you commit. No risk, no pressure.
@@ -152,12 +153,13 @@ export default function Hero() {
           <motion.div variants={item} className="flex flex-col gap-3 w-fit">
             <button
               onClick={() => scrollToSection("#contact")}
-              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-[#C9A84C] hover:text-[#0A0A0A] transition-colors duration-200 cursor-pointer bg-transparent border-none w-fit group"
+              className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-[#C9A84C] hover:text-[#0A0A0A] transition-colors duration-200 cursor-pointer bg-transparent border-none w-fit group"
+              style={{ fontSize: "clamp(0.75rem, 1vw, 1.1rem)" }}
             >
               Get your free website design
               <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </button>
-            <span className="text-[10px] uppercase tracking-widest text-[#9CA3AF]">
+            <span className="uppercase tracking-widest text-[#9CA3AF]" style={{ fontSize: "clamp(0.6rem, 0.7vw, 0.8rem)" }}>
               ◆ See your new website in under 5 days
             </span>
           </motion.div>
@@ -166,7 +168,7 @@ export default function Hero() {
           <motion.div
             variants={item}
             ref={statsRef}
-            className="mt-12 flex gap-8"
+            className="mt-12 flex gap-8 xl:gap-12"
           >
             {[
               { target: 50, suffix: "+", label: "Sites Launched" },
@@ -175,12 +177,12 @@ export default function Hero() {
             ].map((stat) => (
               <div key={stat.label}>
                 <p
-                  className="text-2xl font-bold text-[#C9A84C]"
-                  style={{ fontFamily: "var(--font-heading)" }}
+                  className="font-bold text-[#C9A84C]"
+                  style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(1.5rem, 2.2vw, 3.5rem)" }}
                 >
                   <AnimatedCounter target={stat.target} suffix={stat.suffix} shouldStart={statsInView} />
                 </p>
-                <p className="text-[10px] uppercase tracking-widest text-[#9CA3AF] mt-0.5">
+                <p className="uppercase tracking-widest text-[#9CA3AF] mt-0.5" style={{ fontSize: "clamp(0.6rem, 0.65vw, 0.8rem)" }}>
                   {stat.label}
                 </p>
               </div>
@@ -198,7 +200,7 @@ export default function Hero() {
             { icon: <FiPhone size={12} />, text: "+44 (0) 7700 900000" },
             { icon: <FiMapPin size={12} />, text: "Exeter, United Kingdom" },
           ].map(({ icon, text }) => (
-            <div key={text} className="flex items-center gap-1.5 text-[#9CA3AF] text-xs">
+            <div key={text} className="flex items-center gap-1.5 text-[#9CA3AF]" style={{ fontSize: "clamp(0.7rem, 0.8vw, 1rem)" }}>
               <span className="text-[#C9A84C]">{icon}</span>
               {text}
             </div>
