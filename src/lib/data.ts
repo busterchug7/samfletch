@@ -141,25 +141,31 @@ export const processSteps = [
     step: "01",
     title: "Discovery",
     description:
-      "We learn your business, your goals, your competitors, and your audience. No assumptions.",
+      "We take time to understand your business, goals, and specific requirements, ensuring your website is tailored to your needs and built to attract the right customers.",
   },
   {
     step: "02",
     title: "Design",
     description:
-      "High-fidelity mockups you'll actually be excited to approve — designed for conversion, not just aesthetics.",
+      "We create a front-end mockup of your website, giving you a clear vision of how it will look and perform.",
   },
   {
     step: "03",
-    title: "Build",
+    title: "Approval",
     description:
-      "Clean, fast, modern code. Fully responsive, accessible, and optimized for search from day one.",
+      "Review your design, request changes, and ensure everything feels right—we only move forward once you're completely happy with the result.",
   },
   {
     step: "04",
+    title: "Build",
+    description:
+      "We bring your website to life with speed and precision, delivering a high-performing site built to engage your audience and drive real business results.",
+  },
+  {
+    step: "05",
     title: "Launch",
     description:
-      "Deployment, domain setup, analytics integration, and a full walkthrough so you're never in the dark.",
+      "From deployment to domain setup and analytics integration, we handle everything and provide a full walkthrough, ensuring your website is ready to perform from day one.",
   },
 ];
 

@@ -64,7 +64,7 @@ export default function Hero() {
 
       {/* ════ LEFT COLUMN ════ */}
       <motion.div
-        className="relative z-10 flex flex-col justify-between w-full lg:w-[55%] px-10 md:px-16 pt-20 pb-8"
+        className="relative z-10 flex flex-col justify-between w-full lg:w-[55%] px-10 md:px-16 xl:px-20 2xl:px-28 pt-20 pb-8"
         variants={container}
         initial="hidden"
         animate="show"
@@ -80,8 +80,8 @@ export default function Hero() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[#C9A84C]" />
             </span>
             <span
-              className="text-sm uppercase tracking-[0.18em] text-[#6B7280]"
-              style={{ opacity: visible ? 1 : 0, transition: "opacity 0.4s" }}
+              className="uppercase tracking-[0.18em] text-[#6B7280]"
+              style={{ fontSize: "clamp(0.7rem, 0.85vw, 1.1rem)", opacity: visible ? 1 : 0, transition: "opacity 0.4s" }}
             >
               {phrases[phraseIndex]}
             </span>
@@ -90,8 +90,8 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             variants={item}
-            className="text-6xl md:text-7xl lg:text-[5.5rem] leading-[1] tracking-tight text-[#0A0A0A] mb-6"
-            style={{ fontFamily: "var(--font-heading)" }}
+            className="leading-[1] tracking-tight text-[#0A0A0A] mb-6"
+            style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(3.5rem, 5.8vw, 9rem)" }}
           >
             More Leads.
             <br />
@@ -111,8 +111,8 @@ export default function Hero() {
           {/* Try before you buy */}
           <motion.p
             variants={item}
-            className="text-xl md:text-2xl tracking-[0.08em] uppercase text-[#0A0A0A] mb-3 mt-12"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="tracking-[0.08em] uppercase text-[#0A0A0A] mb-3 mt-12"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.1rem, 1.7vw, 2.4rem)" }}
           >
             Try before you buy.
           </motion.p>
@@ -120,7 +120,8 @@ export default function Hero() {
           {/* Body text */}
           <motion.p
             variants={item}
-            className="text-[#6B7280] text-base leading-relaxed max-w-md mb-10"
+            className="text-[#6B7280] leading-relaxed mb-10"
+            style={{ fontSize: "clamp(0.9rem, 1.1vw, 1.35rem)", maxWidth: "38ch" }}
           >
             We design your website first—so you can see exactly what
             you&apos;re getting before you commit. No risk, no pressure.
@@ -186,7 +187,7 @@ export default function Hero() {
             { icon: <FiPhone size={12} />, text: "+44 (0) 7700 900000" },
             { icon: <FiMapPin size={12} />, text: "Exeter, United Kingdom" },
           ].map(({ icon, text }) => (
-            <div key={text} className="flex items-center gap-1.5 text-[#9CA3AF] text-xs">
+            <div key={text} className="flex items-center gap-1.5 text-[#9CA3AF]" style={{ fontSize: "clamp(0.7rem, 0.8vw, 1rem)" }}>
               <span className="text-[#C9A84C]">{icon}</span>
               {text}
             </div>
@@ -234,9 +235,9 @@ export default function Hero() {
               <span className="absolute left-2/3 top-1/2 -translate-y-1/2 w-px h-6 bg-white/10" />
 
               {[
-                { value: "50+",   label: "Websites Designed" },
-                { value: "100%",  label: "Design Satisfaction" },
-                { value: "48hr",  label: "First Concept Delivered" },
+                { value: "50+",  label: "Websites Designed" },
+                { value: "100%", label: "Design Satisfaction" },
+                { value: "48hr", label: "First Concept Delivered" },
               ].map(({ value, label }) => (
                 <div key={label}>
                   <p
