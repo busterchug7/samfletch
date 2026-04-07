@@ -124,12 +124,18 @@ export const processSteps = [
   },
   {
     step: "03",
+    title: "Collaboration",
+    description:
+      "We work closely with you throughout the process — sharing progress, gathering feedback, and refining every detail until the design is exactly right before we build a single line of code.",
+  },
+  {
+    step: "04",
     title: "Build",
     description:
       "Clean, fast, modern code. Fully responsive, accessible, and optimized for search from day one.",
   },
   {
-    step: "04",
+    step: "05",
     title: "Launch",
     description:
       "Deployment, domain setup, analytics integration, and a full walkthrough so you're never in the dark.",

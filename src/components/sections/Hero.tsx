@@ -158,7 +158,7 @@ export default function Hero() {
               <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </button>
             <span className="text-[10px] uppercase tracking-widest text-[#9CA3AF]">
-              ◆ Limited spots available this month
+              ◆ See your new website in under 5 days
             </span>
           </motion.div>
 
